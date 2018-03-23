@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+<div id="main-container">
+    <div id="main" class="wrapper clearfix">
+        <section>
+            <h2>@Umbraco.Field("projectTitle")</h2>
+            <p>@Umbraco.Field("projectDescription")</p>
+        </section>  
+    </div> <!-- #main -->
+</div> <!-- #main-container -->

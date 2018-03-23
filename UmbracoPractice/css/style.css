@@ -1,0 +1,90 @@
+html { font-size: 100%; 
+  position: relative;
+  min-height: 100%;
+} 
+body {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.231;
+    height: 100%
+	margin-bottom: 60px;
+}
+
+.nav-item a {
+	background-color:none !important;
+	color:white !important;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #343a40;
+  color:white;
+	
+}
+
+h1 {
+	font-size:1.8em;
+}
+
+.dropdown-item:hover {
+	color:black!important;
+}
+
+.navbar-brand {
+	color:white!important;
+}
+
+nav {
+  padding-left:10%!important;
+  padding-right:10%!important;
+}
+
+.article {
+	padding-top:20px!important;
+	padding-bottom:20px!important;
+	width:700px;
+	margin:auto;
+}
+
+img {
+	max-width:100%;
+	display:block;
+	margin:auto;
+}
+
+#sidebar {
+	float: right!important;
+    margin-top: 20px!important;
+}
+
+.form-horizontal {
+	margin-left:20px;
+	margin-top:20px;
+}
+
+h1 {
+	margin-left:35px;
+	margin-top:20px;
+}
+
+#main {
+	margin-left:35px;
+	margin-top:20px;
+}
+
+#Name-error, #Email-error, #Subject-error, #Message-error {
+	color:red;
+	font-size:18px;
+}
+
+
+
+

@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using Umbraco.Web
+
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@{ var root = Model.Content.Site(); }
+@{ var selection = root.Children.Where(x => x.IsVisible()).ToArray();
+    var projectDropdown =
+        Model.Content.AncestorOrSelf(1)
+        .Children
+        .Where(x => x.DocumentTypeAlias == "projectsOverview")
+        .First()
+        .Children
+        .Where("Visible");
+}
+
+@{IEnumerable<IPublishedContent> items = Umbraco.TypedContentAtRoot()    
+.First() //Root document
+.Children() //Level 2 documents
+.Where(x => x.DocumentTypeAlias== "projectsOverview")
+.First() //Projects overview document
+.Children() //Projects documents
+.Where(x => x.HasValue("projectStatus") && Umbraco.GetPreValueAsString(x.GetPropertyValue<int>("projectStatus")) == "Completed")
+.Where(x => x.IsVisible()) // Only visible documents
+.Take(3) 
+.OrderByDescending(x => x.CreateDate); //Newest projects first
+}
+
+    
+                        @foreach (IPublishedContent subMenuItem in items)
+                        {
+                                <a href="@subMenuItem.Url" class="list-group-item">@subMenuItem.Name</a>
+                            
+                        }
+                        
+          
+</ul>
+</div>
+</nav>
