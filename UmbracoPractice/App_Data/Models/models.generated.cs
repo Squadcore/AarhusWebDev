@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e1b3fdf1c329a326")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e76697bb93b93fe8")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -1144,7 +1144,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Photo
+		/// photo
 		///</summary>
 		[ImplementPropertyType("photo")]
 		public Umbraco.Web.Models.ImageCropDataSet Photo
